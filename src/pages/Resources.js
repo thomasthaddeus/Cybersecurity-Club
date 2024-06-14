@@ -1,11 +1,39 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
-import './Resources.css'; // Import the CSS file for styling
+import styled from '@emotion/styled';
+
+const ResourcesPage = styled.div`
+  padding: 20px;
+`;
+
+const ResourcesContent = styled.div`
+  margin-top: 20px;
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    ul {
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+  }
+
+  p,
+  ul {
+    margin-bottom: 20px;
+  }
+`;
 
 const Resources = () => {
   return (
-    <div className="resources-page">
+    <ResourcesPage>
       <h2>Resources</h2>
-      <div className="resources-content">
+      <ResourcesContent>
         <p>Explore a wide range of topics relevant to cybersecurity enthusiasts and professionals. Our resources cover fundamental concepts, advanced techniques, and current trends in the field.</p>
         <h3>Topics</h3>
         <ul>
@@ -106,8 +134,8 @@ const Resources = () => {
             </ul>
           </li>
         </ul>
-      </div>
-    </div>
+      </ResourcesContent>
+    </ResourcesPage>
   );
 };
 
