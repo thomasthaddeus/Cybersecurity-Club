@@ -1,0 +1,21 @@
+.about-us-page {
+  padding: 20px;
+}
+
+.about-us-content {
+  margin-top: 20px;
+}
+
+.about-us-content h3 {
+  margin-top: 20px;
+}
+
+.about-us-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-us-content p,
+.about-us-content ul {
+  margin-bottom: 20px;
+}

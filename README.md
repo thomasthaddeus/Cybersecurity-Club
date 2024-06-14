@@ -22,17 +22,20 @@ This project is a web application for a cybersecurity club, providing informatio
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
+
     ```bash
     git clone https://github.com/yourusername/cybersecurity-club-website.git
     cd cybersecurity-club-website
     ```
 
 2. **Install dependencies**:
+
     ```bash
     npm install
     ```
 
 3. **Start the development server**:
+
     ```bash
     npm start
     ```

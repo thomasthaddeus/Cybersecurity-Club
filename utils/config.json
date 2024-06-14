@@ -1,0 +1,49 @@
+{
+  "plotConfig": {
+    "title": {
+      "text": "Website Workflow",
+      "font": {
+        "family": "Arial, sans-serif",
+        "size": 24,
+        "color": "#333333"
+      }
+    },
+    "xaxis": {
+      "showgrid": false,
+      "zeroline": false,
+      "showticklabels": false
+    },
+    "yaxis": {
+      "showgrid": false,
+      "zeroline": false,
+      "showticklabels": false
+    },
+    "plot_bgcolor": "white",
+    "margin": {
+      "l": 40,
+      "r": 40,
+      "t": 60,
+      "b": 40
+    }
+  },
+  "nodeConfig": {
+    "size": 20,
+    "colors": {
+      "Built": "green",
+      "In Progress": "orange",
+      "Future Work": "red"
+    },
+    "textposition": "top center",
+    "hoverinfo": "text",
+    "font": {
+      "family": "Arial, sans-serif",
+      "size": 14,
+      "color": "#000000"
+    }
+  },
+  "lineConfig": {
+    "width": 2,
+    "color": "black",
+    "hoverinfo": "none"
+  }
+}

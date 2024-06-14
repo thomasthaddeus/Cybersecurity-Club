@@ -1,0 +1,12 @@
+const menuStyle {
+  display: 'flex';
+  justifyContent: 'space-around';
+  listStyleType: 'none';
+  padding: '10px';
+  backgroundColor: '#333';
+}
+
+const menuItemStyle {
+  color: 'white';
+  textDecoration: 'none';
+}
