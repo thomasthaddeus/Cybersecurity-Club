@@ -27,6 +27,13 @@ function App() {
         <Sidebar />
         <Menu />
         <SearchBar placeholder="Search..." onSearch={handleSearch} />
+        <header className="App-header">
+          <img src={LargeFavicon} className="App-logo" alt="logo" />
+          <p>
+            Welcome to the Cybersecurity Club!
+          </p>
+          {/* Other components and content */}
+        </header>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about-us" component={AboutUs} />
@@ -40,30 +47,5 @@ function App() {
     </Router>
   );
 };
-
-export default App;
-
-function App() {
-  const handleSearch = (searchTerm) => {
-    console.log('Search term:', searchTerm);
-    // Add logic here to handle the search
-  };
-
-  return (
-    <div className="App">
-      <Sidebar />
-      <Menu />
-      <SearchBar placeholder="Search..." onSearch={handleSearch} />
-      <header className="App-header">
-        <img src={LargeFavicon} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the Cybersecurity Club!
-        </p>
-        {/* Other components and content */}
-      </header>
-    <Footer />
-    </div>
-  );
-}
 
 export default App;

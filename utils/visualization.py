@@ -8,7 +8,7 @@ import json
 import plotly.graph_objects as go
 
 # Load the configuration file
-with open('./config.json', 'r', encoding='utf-8') as f:
+with open('config.json', 'r', encoding='utf-8') as f:
     config = json.load(f)
 
 # Define the nodes and their properties
