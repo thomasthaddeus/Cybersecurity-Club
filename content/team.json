@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Alex Example",
+    "role": "President",
+    "focus": "Web security and club operations",
+    "bio": "Coordinates meetings, workshops, and beginner-friendly learning paths.",
+    "links": {
+      "github": "",
+      "linkedin": ""
+    }
+  },
+  {
+    "name": "Jordan Example",
+    "role": "CTF Captain",
+    "focus": "Competition practice and challenge review",
+    "bio": "Organizes CTF practice sessions and helps members learn challenge-solving workflows.",
+    "links": {
+      "github": "",
+      "linkedin": ""
+    }
+  },
+  {
+    "name": "Taylor Example",
+    "role": "Blue Team Lead",
+    "focus": "Defensive security and incident response",
+    "bio": "Leads defensive labs focused on logs, detection, and response fundamentals.",
+    "links": {
+      "github": "",
+      "linkedin": ""
+    }
+  }
+]

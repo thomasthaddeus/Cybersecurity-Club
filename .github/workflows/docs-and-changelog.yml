@@ -1,0 +1,48 @@
+name: Documentation and Changelog
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: "30 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    name: Refresh generated documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate documentation, changelog, and sitemap
+        run: npm run automation:docs
+
+      - name: Open pull request when generated files change
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "docs: refresh generated documentation"
+          title: "docs: refresh generated documentation"
+          body: |
+            Automated refresh for generated documentation, changelog, and sitemap files.
+          branch: automation/docs-refresh
+          labels: documentation, automation

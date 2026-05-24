@@ -1,0 +1,59 @@
+{
+  "site": {
+    "name": "Cybersecurity Club",
+    "shortName": "Cyber Club",
+    "tagline": "Learn, Connect, and Grow in the Field of Cybersecurity",
+    "description": "A ready-to-customize website template for cybersecurity clubs, student organizations, and community security groups.",
+    "url": "https://yourwebsite.com",
+    "logo": "cyber_club_512.png",
+    "year": "2026"
+  },
+  "socials": {
+    "discord": "",
+    "github": "",
+    "linkedin": "",
+    "email": "info@cyberclub.org"
+  },
+  "meeting": {
+    "day": "Thursday",
+    "time": "6:00 PM",
+    "location": "Room A",
+    "cadence": "Weekly"
+  },
+  "membership": {
+    "signupUrl": "",
+    "eligibility": "Open to all students and community members interested in cybersecurity."
+  },
+  "contact": {
+    "email": "info@cyberclub.org",
+    "phone": "(123) 456-7890",
+    "address": "1234 Cyber Lane, Tech City, TC 56789"
+  },
+  "navigation": [
+    { "label": "Home", "path": "/" },
+    { "label": "About Us", "path": "/about-us" },
+    { "label": "Events", "path": "/events" },
+    { "label": "Team", "path": "/team" },
+    { "label": "CTF", "path": "/ctf" },
+    { "label": "Resources", "path": "/resources" },
+    { "label": "Join Us", "path": "/join-us" },
+    { "label": "Contact", "path": "/contact" }
+  ],
+  "home": {
+    "intro": "Our club is dedicated to providing resources, events, and a community for individuals interested in cybersecurity. Whether you're a beginner or an experienced professional, you'll find valuable information and opportunities to enhance your skills and knowledge."
+  },
+  "about": {
+    "mission": "Our mission is to educate and empower individuals with the knowledge and skills necessary to protect themselves and others in the digital world.",
+    "overview": "We offer resources, events, and opportunities for members to learn about cybersecurity, network with professionals, and participate in hands-on activities.",
+    "goals": [
+      "Promote awareness and understanding of cybersecurity issues.",
+      "Provide training and resources to develop cybersecurity skills.",
+      "Foster a community of cybersecurity enthusiasts and professionals."
+    ],
+    "team": "Our team is made up of dedicated professionals and enthusiasts who are passionate about cybersecurity."
+  },
+  "join": {
+    "intro": "Become a member to access club resources, participate in events, and join a community of cybersecurity learners.",
+    "formTitle": "Membership Form"
+  }
+}

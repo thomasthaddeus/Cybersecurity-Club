@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
+import templateConfig from '../templateConfig';
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -29,7 +31,7 @@ const SidebarListItem = styled.li`
   margin: 20px 0;
 `;
 
-const SidebarLink = styled.a`
+const SidebarLink = styled(Link)`
   color: white;
   text-decoration: none;
 
@@ -43,24 +45,11 @@ const Sidebar = () => {
     <SidebarContainer>
       <SidebarContent>
         <SidebarList>
-          <SidebarListItem>
-            <SidebarLink href="/">Home</SidebarLink>
-          </SidebarListItem>
-          <SidebarListItem>
-            <SidebarLink href="/about-us">About Us</SidebarLink>
-          </SidebarListItem>
-          <SidebarListItem>
-            <SidebarLink href="/events">Events</SidebarLink>
-          </SidebarListItem>
-          <SidebarListItem>
-            <SidebarLink href="/resources">Resources</SidebarLink>
-          </SidebarListItem>
-          <SidebarListItem>
-            <SidebarLink href="/join-us">Join Us</SidebarLink>
-          </SidebarListItem>
-          <SidebarListItem>
-            <SidebarLink href="/contact">Contact</SidebarLink>
-          </SidebarListItem>
+          {templateConfig.navigation.map((item) => (
+            <SidebarListItem key={item.path}>
+              <SidebarLink to={item.path}>{item.label}</SidebarLink>
+            </SidebarListItem>
+          ))}
         </SidebarList>
       </SidebarContent>
     </SidebarContainer>

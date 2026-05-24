@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Cybersecurity 101",
+    "date": "2026-09-01",
+    "time": "6:00 PM",
+    "location": "Room A",
+    "type": "Workshop",
+    "description": "A beginner-friendly introduction to club activities, safe lab practices, and core security concepts."
+  },
+  {
+    "name": "Web Security Lab",
+    "date": "2026-09-15",
+    "time": "6:00 PM",
+    "location": "Cyber Lab",
+    "type": "Workshop",
+    "description": "Hands-on practice with common web vulnerabilities in a legal training environment."
+  },
+  {
+    "name": "Capture the Flag Practice",
+    "date": "2026-09-29",
+    "time": "5:30 PM",
+    "location": "Room B",
+    "type": "CTF",
+    "description": "Team practice for beginner and intermediate CTF categories."
+  }
+]

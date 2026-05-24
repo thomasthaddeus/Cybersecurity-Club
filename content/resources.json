@@ -1,0 +1,35 @@
+{
+  "intro": "Explore topics relevant to cybersecurity enthusiasts and professionals. Replace these defaults with the learning paths, tools, and references your group recommends.",
+  "learningPaths": [
+    {
+      "name": "Beginner",
+      "description": "Start here if you are new to cybersecurity.",
+      "items": ["Introduction to Cybersecurity", "Basic Cyber Hygiene", "Linux Command Line", "Networking Fundamentals"]
+    },
+    {
+      "name": "Web Security",
+      "description": "Practice how web apps fail and how to defend them.",
+      "items": ["OWASP Top 10", "Burp Suite Basics", "Cross-Site Scripting", "SQL Injection"]
+    },
+    {
+      "name": "Blue Team",
+      "description": "Defensive security, monitoring, and incident response.",
+      "items": ["Log Analysis", "SIEM Fundamentals", "Incident Response", "Threat Hunting"]
+    },
+    {
+      "name": "Red Team",
+      "description": "Ethical offensive security in approved lab environments.",
+      "items": ["Reconnaissance", "Vulnerability Assessment", "Privilege Escalation", "Reporting"]
+    },
+    {
+      "name": "Digital Forensics",
+      "description": "Investigate systems, files, and evidence safely.",
+      "items": ["Disk Images", "Memory Analysis", "Chain of Custody", "Timeline Analysis"]
+    },
+    {
+      "name": "CTF Practice",
+      "description": "Recommended challenge categories for competition prep.",
+      "items": ["Crypto", "Forensics", "Reverse Engineering", "Binary Exploitation"]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import templateConfig from '../templateConfig';
 
 const HomePage = styled.div`
   padding: 20px;
@@ -44,19 +45,12 @@ const Home = () => {
   return (
     <HomePage data-testid="home-page">
       <Header>Welcome to the Cybersecurity Club</Header>
-      <Subheader>Learn, Connect, and Grow in the Field of Cybersecurity</Subheader>
-      <Paragraph>
-        Our club is dedicated to providing resources, events, and a community for
-        individuals interested in cybersecurity. Whether you're a beginner or an
-        experienced professional, you'll find valuable information and opportunities
-        to enhance your skills and knowledge.
-      </Paragraph>
+      <Subheader>{templateConfig.site.tagline}</Subheader>
+      <Paragraph>{templateConfig.home.intro}</Paragraph>
       <Navigation>
-        <NavLink to="/about-us">About Us</NavLink>
-        <NavLink to="/events">Events</NavLink>
-        <NavLink to="/resources">Resources</NavLink>
-        <NavLink to="/join-us">Join Us</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        {templateConfig.navigation.filter((item) => item.path !== '/').map((item) => (
+          <NavLink key={item.path} to={item.path}>{item.label}</NavLink>
+        ))}
       </Navigation>
     </HomePage>
   );

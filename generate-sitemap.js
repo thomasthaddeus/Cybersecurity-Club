@@ -1,26 +1,21 @@
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { createWriteStream } = require('fs');
 const { resolve } = require('path');
+const templateConfig = require('./template.config.json');
 
 const generateSitemap = async () => {
-  const sitemap = new SitemapStream({ hostname: 'https://yourwebsite.com' });
+  const sitemap = new SitemapStream({ hostname: process.env.SITE_URL || templateConfig.site.url });
 
   const writeStream = createWriteStream(resolve(__dirname, 'public', 'sitemap.xml'));
   sitemap.pipe(writeStream);
 
-  // Add your routes here
-  sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
-  sitemap.write({ url: '/about-us', changefreq: 'weekly', priority: 0.8 });
-  sitemap.write({ url: '/events', changefreq: 'weekly', priority: 0.8 });
-  sitemap.write({ url: '/resources', changefreq: 'weekly', priority: 0.8 });
-  sitemap.write({ url: '/join-us', changefreq: 'monthly', priority: 0.6 });
-  sitemap.write({ url: '/contact', changefreq: 'monthly', priority: 0.6 });
-
-  // Additional routes can be added here
+  templateConfig.navigation.forEach((item) => {
+    sitemap.write({ url: item.path, changefreq: item.path === '/' ? 'daily' : 'weekly', priority: item.path === '/' ? 1.0 : 0.8 });
+  });
 
   sitemap.end();
 
-  await streamToPromise(writeStream);
+  await streamToPromise(sitemap);
   console.log('Sitemap generated successfully!');
 };
 

@@ -1,0 +1,30 @@
+{
+  "teamName": "Cyber Club CTF",
+  "intro": "Use this page to share competition plans, practice platforms, and safe writeup expectations for your club.",
+  "practicePlatforms": [
+    {
+      "name": "picoCTF",
+      "url": "https://picoctf.org",
+      "level": "Beginner"
+    },
+    {
+      "name": "OverTheWire",
+      "url": "https://overthewire.org/wargames/",
+      "level": "Beginner"
+    },
+    {
+      "name": "TryHackMe",
+      "url": "https://tryhackme.com",
+      "level": "Beginner to Intermediate"
+    }
+  ],
+  "upcomingCompetitions": [
+    {
+      "name": "Practice CTF Night",
+      "date": "2026-10-06",
+      "url": "",
+      "notes": "Internal practice event for new members."
+    }
+  ],
+  "writeupPolicy": "Do not publish flags, active competition solutions, or private infrastructure details. Writeups should focus on learning, defensive value, and legal practice environments."
+}

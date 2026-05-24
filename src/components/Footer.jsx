@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import styled from '@emotion/styled';
+import templateConfig from '../templateConfig';
 
 const FooterContainer = styled.footer`
   background-color: #333;
@@ -22,10 +23,10 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <p>© 2024 Cybersecurity Club</p>
-        <p>Email: info@cyberclub.org</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 1234 Cyber Lane, Tech City, TC 56789</p>
+        <p>© {templateConfig.site.year} {templateConfig.site.name}</p>
+        <p>Email: {templateConfig.contact.email}</p>
+        <p>Phone: {templateConfig.contact.phone}</p>
+        <p>Address: {templateConfig.contact.address}</p>
       </FooterContent>
     </FooterContainer>
   );

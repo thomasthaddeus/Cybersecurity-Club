@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import styled from '@emotion/styled';
+import templateConfig from '../templateConfig';
 
 const ContactPage = styled.div`
   padding: 20px;
@@ -47,9 +48,9 @@ const Contact = () => {
       <h2>Contact Us</h2>
       <ContactDetails>
         <p>If you have any questions or need more information, please feel free to contact us:</p>
-        <p><strong>Email:</strong> info@cyberclub.org</p>
-        <p><strong>Phone:</strong> (123) 456-7890</p>
-        <p><strong>Address:</strong> 1234 Cyber Lane, Tech City, TC 56789</p>
+        <p><strong>Email:</strong> {templateConfig.contact.email}</p>
+        <p><strong>Phone:</strong> {templateConfig.contact.phone}</p>
+        <p><strong>Address:</strong> {templateConfig.contact.address}</p>
       </ContactDetails>
       <ContactForm>
         <h3>Send Us a Message</h3>

@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import styled from '@emotion/styled';
+import templateConfig from '../templateConfig';
 
 const JoinUsPage = styled.div`
   padding: 20px;
@@ -45,10 +46,10 @@ const JoinUs = () => {
     <JoinUsPage>
       <h2>Join Us</h2>
       <JoinDetails>
-        <p>Become a member of the Cybersecurity Club to access exclusive content, participate in events, and join our community of cybersecurity enthusiasts.</p>
+        <p>{templateConfig.join.intro}</p>
       </JoinDetails>
       <JoinForm>
-        <h3>Membership Form</h3>
+        <h3>{templateConfig.join.formTitle}</h3>
         <form>
           <label>
             Name:

@@ -35,30 +35,49 @@ const Td = styled.td`
   border-bottom: 1px solid #ddd;
 `;
 
-const Events = ({ events }) => {
+const EmptyState = styled.p`
+  margin-top: 20px;
+`;
+
+const EventType = styled.span`
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #e8f0fe;
+  color: #1a4f8b;
+  font-size: 0.9em;
+`;
+
+const Events = ({ events = [] }) => {
   return (
     <EventsContainer>
       <h2>Upcoming Events</h2>
+      {events.length === 0 ? (
+        <EmptyState>No events have been added yet. Add events in content/events.json.</EmptyState>
+      ) : (
       <Table>
         <Thead>
           <tr>
             <Th>Event Name</Th>
+            <Th>Type</Th>
             <Th>Date</Th>
             <Th>Time</Th>
-            <Th>Venue</Th>
+            <Th>Location</Th>
           </tr>
         </Thead>
         <Tbody>
           {events.map((event, index) => (
-            <tr key={index}>
+            <tr key={`${event.name}-${event.date}-${index}`}>
               <Td>{event.name}</Td>
+              <Td><EventType>{event.type}</EventType></Td>
               <Td>{event.date}</Td>
               <Td>{event.time}</Td>
-              <Td>{event.venue}</Td>
+              <Td>{event.location}</Td>
             </tr>
           ))}
         </Tbody>
       </Table>
+      )}
     </EventsContainer>
   );
 };
