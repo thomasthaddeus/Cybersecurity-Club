@@ -17,19 +17,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: latest
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Check generated docs
-        run: npm run automation:docs:check
+      - name: Generate docs
+        run: npm run automation:docs
+
+      - name: Fail if generated files changed
+        run: git diff --exit-code
 
       - name: Run tests
         run: npm test
